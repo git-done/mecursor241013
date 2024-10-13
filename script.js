@@ -46,6 +46,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // 在 DOMContentLoaded 事件监听器中添加以下代码
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navLinks.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
     // AI聊天功能
     chatForm.addEventListener('submit', async (e) => {
         e.preventDefault();
