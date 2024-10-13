@@ -124,13 +124,50 @@ button:hover {
     display: none;
 }
 
+/* 修改导航栏样式 */
 .navbar {
     background-color: rgba(0, 0, 0, 0.7) !important;
     border-radius: 0 0 15px 15px;
+    padding: 10px 0;
 }
 
-.navbar-brand, .nav-link {
-    color: white !important;
+.navbar-brand {
+    color: #4da6ff !important; /* 亮蓝色 */
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.nav-link {
+    color: #87cefa !important; /* 浅蓝色 */
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin: 0 10px;
+}
+
+.nav-link:hover {
+    color: #00bfff !important; /* 深天蓝 */
+    transform: translateY(-2px);
+}
+
+/* 添加活跃状态样式 */
+.nav-link.active {
+    color: #1e90ff !important; /* 道奇蓝 */
+    border-bottom: 2px solid #1e90ff;
+}
+
+/* 为导航栏添加渐变背景 */
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #000428, #004e92);
+    opacity: 0.8;
+    z-index: -1;
+    border-radius: 0 0 15px 15px;
 }
 
 h1, h2 {
