@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人网页 - 星辰大海的召唤</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsrsasign/8.0.20/jsrsasign-all-min.js"></script>
+</head>
+<body>
+    <div id="universe-background"></div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <div class="container">
+            <a class="navbar-brand" href="#home">星辰大海的召唤</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#home">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">关于我</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">项目</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ai-chat">AI聊天</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <section id="home" class="section">
+            <h1 class="text-white">欢迎来到星辰大海的召唤</h1>
+            <p class="text-white">在这里，我们一起探索无尽的宇宙奥秘...</p>
+        </section>
+
+        <section id="about" class="section d-none">
+            <h2>关于我</h2>
+            <p id="about-description"></p>
+        </section>
+
+        <section id="projects" class="section d-none">
+            <h2>我的项目</h2>
+            <div class="project-list">
+                <div class="project-item">
+                    <h3>云原生</h3>
+                    <p>探索云原生技术的前沿</p>
+                    <a href="https://kubernetes.io/zh-cn/" target="_blank" class="btn btn-primary">了解更多</a>
+                </div>
+                <div class="project-item">
+                    <h3>人工智能</h3>
+                    <p>探索AI编程的未来</p>
+                    <a href="https://www.cursor.com/" target="_blank" class="btn btn-primary">了解更多</a>
+                </div>
+                <div class="project-item">
+                    <h3>中国的kimi</h3>
+                    <p>体验先进的AI对话系统</p>
+                    <a href="https://kimi.moonshot.cn/" target="_blank" class="btn btn-primary">了解更多</a>
+                </div>
+                <div class="project-item">
+                    <h3>手摸手的AI编程cursor实战</h3>
+                    <p>学习使用cursor的实战课程</p>
+                    <a href="https://www.bilibili.com/video/BV1e3t4etExj/?vd_source=7d5f62d88e41baca753319c47856f1f0" target="_blank" class="btn btn-primary">观看课程</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="ai-chat" class="section d-none">
+            <h2>AI聊天</h2>
+            <div id="chat-container">
+                <div id="chat-messages"></div>
+                <div id="suggested-questions"></div>
+                <form id="chat-form">
+                    <input type="text" id="user-input" class="form-control" placeholder="在这里输入您的问题...">
+                    <button type="submit" class="btn btn-primary">发送</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer class="bg-transparent text-white text-center py-3 mt-4">
+        <p>&copy; 2024 您的名字. 保留所有权利。</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

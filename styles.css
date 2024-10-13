@@ -1,0 +1,316 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    position: relative;
+    background-color: #f0f0f0;
+}
+
+#universe-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+header, main, footer {
+    padding: 20px;
+}
+
+#chat-container {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+#chat-messages {
+    height: 400px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: rgba(248, 249, 250, 0.5);
+    border-radius: 10px;
+}
+
+.message {
+    position: relative;
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 15px;
+    max-width: 80%;
+    backdrop-filter: blur(3px);
+}
+
+.copy-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-message {
+    background-color: rgba(0, 123, 255, 0.7);
+    color: white;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.ai-message {
+    background-color: rgba(233, 236, 239, 0.7);
+    color: #333;
+}
+
+#chat-form {
+    display: flex;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid rgba(206, 212, 218, 0.5);
+    border-radius: 8px;
+    margin-right: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+button {
+    padding: 12px 24px;
+    background-color: rgba(0, 123, 255, 0.8);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba(0, 86, 179, 0.8);
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.d-none {
+    display: none;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    border-radius: 0 0 15px 15px;
+}
+
+.navbar-brand, .nav-link {
+    color: white !important;
+}
+
+h1, h2 {
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+}
+
+#about-description {
+    font-style: italic;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+#home h1, #home p {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+/* 添加渐变背景 */
+.gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* 为不同部分添加特殊背景 */
+#home {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+#projects {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+/* 美化滚动条 */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* 在文件末尾添加以下样式 */
+
+.blue-theme {
+    background-color: #e6f2ff;
+}
+
+.blue-theme #about {
+    background-color: rgba(173, 216, 230, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+    color: #333;
+}
+
+.blue-theme #about-description {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #0056b3;
+}
+
+.blue-theme h2 {
+    color: #0056b3;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.7);
+}
+
+.dark-theme {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+.dark-theme #projects {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.dark-theme h2 {
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.project-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(50% - 20px); /* 改为两列布局 */
+    min-width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+@media (min-width: 992px) {
+    .project-item {
+        width: calc(25% - 20px); /* 在大屏幕上改为四列布局 */
+    }
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+}
+
+.project-item h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    margin-bottom: 15px;
+}
+
+.dark-theme .project-item {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.dark-theme .project-item h3 {
+    color: #4da6ff;
+}
+
+/* 修改 #ai-chat 样式 */
+#ai-chat {
+    position: relative;
+    z-index: 1;
+}
+
+#ai-chat::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    z-index: -1;
+    border-radius: 15px;
+}
+
+#suggested-questions {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.suggested-question {
+    background-color: rgba(0, 123, 255, 0.1);
+    border: 1px solid rgba(0, 123, 255, 0.2);
+    border-radius: 20px;
+    padding: 8px 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.suggested-question:hover {
+    background-color: rgba(0, 123, 255, 0.2);
+}
