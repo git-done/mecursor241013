@@ -351,3 +351,56 @@ h1, h2 {
 .suggested-question:hover {
     background-color: rgba(0, 123, 255, 0.2);
 }
+
+/* 在文件末尾添加以下样式 */
+
+.periodic-table {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    gap: 2px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.element {
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+.element:hover {
+    transform: scale(1.1);
+}
+
+.element-symbol {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.element-number {
+    font-size: 0.8em;
+}
+
+.element-name {
+    font-size: 0.7em;
+    text-align: center;
+}
+
+/* 为不同族的元素设置不同的背景色 */
+.alkali-metal { background-color: #ff9999; }
+.alkaline-earth-metal { background-color: #ffdead; }
+.transition-metal { background-color: #ffc0c0; }
+.post-transition-metal { background-color: #cccccc; }
+.metalloid { background-color: #cccc99; }
+.nonmetal { background-color: #a0ffa0; }
+.halogen { background-color: #ffff99; }
+.noble-gas { background-color: #c0ffff; }
+.lanthanide { background-color: #ffbfff; }
+.actinide { background-color: #ff99cc; }

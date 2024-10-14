@@ -156,4 +156,59 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 将 copyText 函数添加到全局作用域
     window.copyText = copyText;
+
+    // 在文件末尾添加以下函数
+
+    function showPeriodicTable() {
+        document.querySelectorAll('.section').forEach(section => {
+            section.classList.add('d-none');
+        });
+        document.getElementById('periodic-table').classList.remove('d-none');
+        generatePeriodicTable();
+    }
+
+    function generatePeriodicTable() {
+        const container = document.getElementById('periodicTableContainer');
+        if (container.children.length > 0) return; // 如果已经生成了周期表，就不再重复生成
+
+        elements.forEach(element => {
+            const elementDiv = document.createElement('div');
+            elementDiv.className = `element ${element.category}`;
+            elementDiv.style.gridColumn = element.column;
+            elementDiv.style.gridRow = element.row;
+            elementDiv.innerHTML = `
+                <div class="element-number">${element.number}</div>
+                <div class="element-symbol">${element.symbol}</div>
+                <div class="element-name">${element.name}</div>
+            `;
+            elementDiv.onclick = () => speakElementInfo(element);
+            container.appendChild(elementDiv);
+        });
+    }
+
+    function speakElementInfo(element) {
+        const speech = new SpeechSynthesisUtterance();
+        speech.text = `${element.name}，原子序数${element.number}，化学符号${element.symbol}。${element.description}`;
+        speech.lang = 'zh-CN';
+        speechSynthesis.speak(speech);
+    }
+
+    // 元素数据（这里只列出了一部分元素作为示例）
+    const elements = [
+        { number: 1, symbol: 'H', name: '氢', category: 'nonmetal', column: 1, row: 1, description: '氢是最轻的元素，在宇宙中含量最多。' },
+        { number: 2, symbol: 'He', name: '氦', category: 'noble-gas', column: 18, row: 1, description: '氦是一种惰性气体，常用于气球和低温研究。' },
+        // ... 添加更多元素
+    ];
+
+    // 在 DOMContentLoaded 事件监听器中添加对新导航链接的处理
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (this.getAttribute('href') === '#periodic-table') {
+                e.preventDefault();
+                showPeriodicTable();
+            }
+            navLinks.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
 });
